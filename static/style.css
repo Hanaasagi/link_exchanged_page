@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #66CCFF;
+}
+
+h1 {
+  padding: 0 1em;
+  color: #FFFFFF;
+}
+
+form {
+  padding: 1em 2em;
+  font: 16px Arial, Helvetica, sans-serif;
+  background-color: #39C5BB ;
+}
+
+.entries-area {
+  font: 16px Arial, Helvetica, sans-serif;
+  padding: 0.5em 2em;
+  background-color: #8491C3;
+}
+
+.entries-area p {
+  padding: 0.5em 1em;
+  background-color:	#0086A2;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>友链申请</title>
+    <link rel="stylesheet" href="/static/style.css" type="text/css">
+  </head>
+  <body>
+    <h1>请留下萌萌的友链吧<h1>
+    <form action="/post" method="POST">
+      <table>
+        <tr>
+          <th>name</th>
+          <td>
+            <input type="text" name="name" />
+          </td>
+        </tr>
+        <tr>
+          <th>desc</th>
+          <td colspan=2>
+            <textarea rows="5" cols="60" name="comment"></textarea>
+          </td>
+        </tr>
+        <tr>
+          <th>captcha</th>
+          <td>
+            <input type="text" name="captcha" />
+          </td>
+          <td>
+            <img src="/captcha"/>
+          </td>
+        </tr>
+      </table>
+      <button type="submit">提交</button>
+    </form>
+    <div class="entries-area">
+      {% for comment in comment_list %}
+        <h3> {{ comment.name }} <small> {{ comment.create_at | datetime_fmt }} </small> </h3>
+        <p> {{ comment.comment | nl2br }} </p>
+      {% endfor %}
+    </div>
+  </body>
+</html>
